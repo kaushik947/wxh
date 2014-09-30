@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.ops
+{
+background:white;
+position:absolute;
+width:50%;
+height:10%;
+
+border-radius:15%;
+color:black;
+
+}
+#opa
+{
+left:-3%;
+top:55%;
+}
+#opb
+{
+left:53%;
+top:55%;
+}
+#opc
+{
+left:-3%;
+top:75%;
+}
+#opd
+{
+left:53%;
+top:75%;
+}
+
+#play
+{
+text-align:right;
+}
+#how
+{
+text-align:left;
+}
+#rate
+{
+text-align:right;
+}
+#lead
+{
+text-align:left;
+}
+.inops
+{
+
+font-size:120%;
+ text-shadow: 5px 5px 5px black;
+}
+#info
+{
+font-size:150%;
+ text-shadow: 5px 5px 5px white;
+color:white;
+}
+
+p
+{
+color:red;
+
+
+}
+h1
+{
+	color:red;
+	position:absolute;
+	top:35%;
+	left:20%;
+	color:white;
+	text-shadow: 5px 5px 5px white;
+	
+}
+#score
+{
+	position:absolute;
+	color:white;
+	left:50%;
+	top:15%;
+	font-weight:bold;
+	font-size:220%;
+	text-shadow: 5px 5px 5px white;
+}
+body
+{
+background:black;
+max-width:100%;
+max-height:100%;
+overflow:hidden;
+
+
+}
+#a
+{
+position:absolute;
+left:40%;
+top:40%;
+border: 2px solid white;
+background:black;
+width:20%;
+height:20%;
+display:none;
+
+
+}
+
+#bbb
+{
+position:absolute;
+left:40%;
+top:40%;
+border: 2px solid white;
+background:black;
+width:20%;
+height:20%;
+display:none;
+
+
+}
+
+#t
+{
+position:absolute;
+left:50%;
+top:-2%;
+background:white;
+width:2%;
+height:2%;
+display:none;
+}
+#l
+{
+position:absolute;
+left:-2%;
+top:50%;
+background:white;
+height:2%;
+width:2%;
+display:none;
+	
+}#r
+{
+position:absolute;
+left:100%;
+top:50%;
+background:white;
+height:2%;
+width:2%;
+display:none;
+}#b
+{
+position:absolute;
+left:50%;
+top:100%;
+background:white;
+width:2%;
+height:2%;
+display:none;
+	
+}
+</style>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script src="./myjq.js"></script>
+<script>
+document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    var media;
+    function onDeviceReady() {
+    	
+
+        		     }
+    
+    	
+var speeda;
+var speedbbb;
+var speedt;
+var speedl;
+var speedb;
+var speedr;
+var scr;
+var variationw;
+var variationh;
+
+
+
+
+var hits=0;
+var la;
+var ta;
+var ha;
+var wa;
+
+
+var x;
+var y;
+
+
+var ll;
+var tt;
+var hh;
+var ww;
+
+
+var score=-1;
+
+
+var l;
+var t;
+var ht;
+var wt;
+var bug=0;
+
+
+var flag=0;
+var lef=0;
+var tp=0;
+var h=0;
+var w=0;
+
+
+	var setdetect;
+	var setattack;
+var timer=3000;
+
+var infoa="Hold an edge and drag to change the Width and Height of the Rectangle";
+var infob="Protect the Rectangle from the attacks by changing the Width and Height" ;
+
+
+$(document).ready(function(){
+	
+	
+	
+speeda=$("#a");
+speedbbb=$("#bbb");
+speedt=$("#t");
+speedl=$("#l");
+speedb=$("#b");
+speedr=$("#r");
+scr=$("#score");
+
+
+	variationw=speedt.width();
+
+
+	variationh=speedl.height();
+
+$("h1").text("WIDTH x HEIGHT");
+	
+	var play=$("#opa");
+    var htplay=$("#opb");
+
+
+
+htplay[0].addEventListener('touchstart',
+function() {
+	
+scr.fadeOut();
+$("h1").fadeOut();
+
+$("#opa").animate({left:'-55%'},500);
+
+$("#opb").animate({left:'105%'},500);
+
+$("#opc").animate({top:'105%'},500);
+
+$("#opd").animate({top:'105%'},500);
+
+speedbbb.fadeIn();
+$("#info").fadeIn();
+$("#info").text(infoa);
+
+setTimeout(function(){
+demo(40,40,40,20);
+},1000);
+
+setTimeout(function(){
+demo(40,60,40,0);
+demo(40,60,40,20);
+},1900);
+
+setTimeout(function(){
+demo(40,60,0,20);
+demo(20,60,20,20);
+
+},3700);
+
+setTimeout(function(){
+demo(20,60,20,0);
+demo(20,40,20,20);
+},5400);
+
+setTimeout(function(){
+demo(40,40,0,20);
+demo(40,40,20,20);
+},7000);
+
+setTimeout(function(){
+$("#info").fadeOut(1000,function(){
+$("#info").text(infob);
+$("#info").fadeIn(2000);});
+
+speedr.show();
+speedr.animate({left:'-2%'},2200,function(){
+
+speedr.hide();
+speedr.css("left","100%");});
+
+demo(60,40,0,20);
+demo(60,40,20,20);
+
+
+},9000);
+
+setTimeout(function (){
+
+speedb.show();
+speedb.animate({top:'-2%'},2200,function(){
+
+speedb.hide();
+speedb.css("top","100%");});
+
+demo(60,40,20,0);
+demo(60,20,20,20);
+
+},11200);
+
+setTimeout(function(){
+
+speedbbb.fadeOut(400,function(){
+
+speedbbb.css("left","40%");
+speedbbb.css("top","40%");
+speedbbb.css("height","20%");
+speedbbb.css("width","20%");});
+
+$("#info").fadeOut();
+$("#opa").animate({left:'-3%'},500);
+
+$("#opb").animate({left:'53%'},500);
+
+$("#opc").animate({top:'75%'},500);
+
+$("#opd").animate({top:'75%'},500)
+
+},13400);
+
+},false);
+play[0].addEventListener('touchstart', function() {
+	
+
+	
+	    	media=new Media("/android_asset/www/flyby-Conor-1500306612.mp3");
+		
+	
+scr.fadeOut();
+$("h1").fadeOut();
+
+$("#opa").animate({left:'-55%'},500);
+
+$("#opb").animate({left:'105%'},500);
+
+$("#opc").animate({top:'105%'},500);
+
+$("#opd").animate({top:'105%'},500);
+
+
+	speeda.css("left","40%");
+
+		speeda.css("top","40%");
+		
+
+		speeda.css("width","20%");
+		
+		speeda.css("height","20%");
+		
+setTimeout(function(){
+speeda.fadeIn();
+
+
+setdetect=setInterval(detect,1);
+
+setattack=setInterval(timeradjust,3000);
+
+
+
+		     },800);
+
+	
+	},false);
+	
+
+
+	
+
+	
+
+
+
+	
+	
+	
+
+
+var startX,offsetX,startY,offsetY,el = $(document);
+
+
+
+
+el[0].addEventListener('touchstart', function(event) {
+ 
+ event.preventDefault();
+ 
+ //  offsetX = ($(window).width()-el.outerWidth(true))/2;
+  startX = event.targetTouches[0].pageX;
+ 
+  // offsetY = ($(window).height()-el.outerHeight(true))/2;
+  startY = event.targetTouches[0].pageY;
+ 
+
+ lef=parseInt(speeda.css("left"),10);
+ tp=parseInt(speeda.css("top"),10);
+ h=speeda.height();
+ w=speeda.width();
+
+
+ var x=startX;
+ var y=startY;
+
+
+if(x>=lef&&x<=(lef+w)&&y<=(tp+h+30)&&y>=(tp+h-30))
+{
+    	flag=1;
+	navigator.notification.vibrate(12);
+}
+else if(x>=lef&&x<=(lef+w)&&y<=(tp+30)&&y>=(tp-30))
+ {
+ 	flag=2;
+	navigator.notification.vibrate(12);
+}
+else if(y>=tp&&y<=(tp+h)&&x<=(lef+w+30)&&x>=(lef+w-30))
+{
+	flag=3;
+	navigator.notification.vibrate(12);
+}
+else if(y>=tp&&y<=(tp+h)&&x<=(lef+30)&&x>=(lef-30))
+{
+	flag=4;
+	navigator.notification.vibrate(12);
+}
+
+    
+
+
+
+},false);
+
+
+
+
+el[0].addEventListener("touchmove", function(event) {
+
+
+ 
+ event.preventDefault();
+ 
+  var diffX = (event.changedTouches[0].pageX);
+ 
+  var diffY = (event.changedTouches[0].pageY);
+ 
+ var x=diffX;
+ var y=diffY;
+
+
+
+
+
+
+
+
+if(flag==1)
+{
+
+
+    if(y<tp)
+{
+
+
+    speeda.animate({
+                       top:y
+                       ,height:tp-y
+
+
+                   },1);
+
+
+
+
+
+
+}
+
+
+else
+{
+    speeda.animate({
+                       top:tp
+                       ,height:(y)-tp
+
+
+                   },1);
+}
+}
+else if(flag==2)
+{
+
+
+    if(y<tp+h)
+{
+
+
+    speeda.animate({
+                       top:y
+                       ,height:h+tp-y
+
+
+                   },1);
+
+
+
+
+
+
+}
+
+
+else
+{
+    speeda.animate({
+                       top:tp+h
+                       ,height:(y)-(tp+h)
+
+
+                   },1);
+}
+
+
+}
+
+
+
+
+else if(flag==3)
+{
+
+
+    if(x<lef)
+{
+
+
+    speeda.animate({
+                       left:x
+                       ,width:lef-x
+
+
+                   },1);
+
+
+
+
+
+
+}
+
+
+else
+{
+    speeda.animate({
+                       left:lef
+                       ,width:(x)-lef
+
+
+                   },1);
+}
+}
+
+
+
+
+else if(flag==4)
+{
+
+
+
+
+    if(x<lef+w)
+{
+
+
+    speeda.animate({
+                       left:x
+                       ,width:w+lef-x
+
+
+                   },1);
+
+
+
+
+
+
+}
+
+
+else
+{
+    speeda.animate({
+                       left:lef+w
+                       ,width:(x)-(lef+w)
+
+
+                   },1);
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+},false);
+
+
+el[0].addEventListener("touchend", function(e) {
+ e.preventDefault();
+flag=0;
+
+
+},false);
+
+
+});
+
+function demo(dt,dl,dh,dw)
+{
+speedbbb.animate({
+
+top:dt+"%",
+left:dl+"%",
+height:dh+"%",
+width:dw+"%"
+
+
+},800);
+
+
+}
+function gameover()
+{
+	timer=3000;
+	$("h1").text("GAME OVER");
+	$("h1").fadeIn();
+
+		clearInterval(setdetect);
+		clearInterval(setattack);
+
+		scr.fadeIn();	
+		speeda.fadeOut();
+	
+
+$("#opa").animate({left:'-3%'},500);
+
+$("#opb").animate({left:'53%'},500);
+
+$("#opc").animate({top:'75%'},500);
+
+$("#opd").animate({top:'75%'},500);
+
+score=-1;
+
+	
+
+		
+	
+}
+
+
+function detect(){
+
+
+
+
+ ll=parseInt(speeda.css("left"),10);
+ tt=parseInt(speeda.css("top"),10);
+ hh=speeda.height();
+ ww=speeda.width();
+
+
+
+
+
+
+if(bug==1)
+	{
+
+
+ la=parseInt(speedt.css("left"),10);
+ ta=parseInt(speedt.css("top"),10);
+ ha=speedt.height();
+ wa=speedt.width();
+
+
+
+
+		if(((ta+ha)>=tt&&(ta+ha)<=(tt+hh))&&((la<=(ll+ww))&&((la+wa)>=ll)))
+		{
+				hits++;
+				scr.text(score);
+				gameover();
+
+
+		}
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+else if(bug==2)
+	{
+
+
+ la=parseInt(speedl.css("left"),10);
+ ta=parseInt(speedl.css("top"),10);
+ ha=speedl.height();
+ wa=speedl.width();
+
+
+
+
+		if(((la+wa)>=ll&&(la+wa)<=(ll+ww))&&((ta<=(tt+hh))&&((ta+ha)>=tt)))
+		{
+				hits++;
+				scr.text(score);
+
+				gameover();
+
+
+		}
+
+
+
+
+
+
+	}
+
+
+else if(bug==3)
+	{
+
+
+ la=parseInt(speedb.css("left"),10);
+ ta=parseInt(speedb.css("top"),10);
+ ha=speedb.height();
+ wa=speedb.width();
+
+
+
+
+		if(((ta)>=tt&&(ta)<=(tt+hh))&&((la<=(ll+ww))&&((la+wa)>=ll)))
+		{
+				hits++;
+				scr.text(score);
+
+				gameover();
+
+
+		}
+
+
+
+
+
+
+	}
+
+
+else if(bug==4)
+	{
+
+
+ la=parseInt(speedr.css("left"),10);
+ ta=parseInt(speedr.css("top"),10);
+ ha=speedr.height();
+ wa=speedr.width();
+
+
+
+
+		if(((la)>=ll&&(la)<=(ll+ww))&&((ta<=(tt+hh))&&((ta+ha)>=tt)))
+		{
+				hits++;
+				scr.text(score);
+
+				gameover();
+
+		}
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+}
+
+
+var timeradjust=function(){
+
+
+clearInterval(setattack);
+if(timer>2000)
+{
+
+timer=timer-200;
+attack(timer);
+
+setattack=setInterval(timeradjust,timer+200);
+}
+else
+{
+attack(1800);
+setattack=setInterval(function(){attack(timer-200);},timer);
+}
+
+
+}
+
+
+
+
+
+function attack(attspeed){
+
+media.play();
+
+
+
+ l=parseInt(speeda.css("left"),10);
+ t=parseInt(speeda.css("top"),10);
+ ht=speeda.height();
+ wt=speeda.width();
+
+
+ 
+
+
+  y = Math.floor((Math.random() * 10)+1);
+
+
+  x = Math.floor((Math.random() * 10));
+
+
+if(y>5)
+y=y-5;
+
+
+var k1=l+((wt*(y-1))/4)-(variationw/2);
+var k2=t+((ht*(y-1))/4)-(variationh/2);
+
+
+
+if(x==0||x==4||x==8)
+{
+	bug=1;
+	speedt.css("left",k1);
+speedt.show();
+speedt.animate({
+top:'100%'
+},attspeed,function(){
+
+
+speedt.hide();
+speedt.css("top","0%")
+
+
+});
+
+
+}
+
+
+else if(x==1||x==5||x==9)
+{
+	bug=2;
+	speedl.css("top",k2);
+speedl.show();
+speedl.animate({
+left:'100%'
+},attspeed,function(){
+
+
+speedl.hide();
+
+
+speedl.css("left","0%")
+
+
+});
+
+
+}
+else if(x==2||x==6)
+{
+	bug=3;
+	speedb.css("left",k1);
+speedb.show();
+speedb.animate({
+top:'-5%'
+},attspeed,function(){
+
+
+speedb.hide();
+
+
+speedb.css("top","100%")
+
+
+});
+
+
+
+
+}
+
+
+else if(x==3||x==7)
+{
+	bug=4;
+	speedr.css("top",k2);
+speedr.show();
+speedr.animate({
+left:'-5%'
+},attspeed,function(){
+
+
+speedr.hide();
+
+
+speedr.css("left","100%")
+
+
+});
+
+
+
+
+}
+score++;
+
+
+}
+
+
+
+
+
+</script>
+</head>
+<body>
+<h1></h1>
+
+
+<h2 id="score"></h2>
+<div id="info"></div>
+
+<div id="a"></div>
+<div id="bbb"></div>
+
+
+<div id="t"></div>
+
+
+<div id="l"></div>
+
+
+<div id="r"></div>
+
+
+<div id="b"></div>
+
+
+<div id="opa" class="ops"><div id="play" class="inops">Play</div></div>
+<div id="opb" class="ops"><div id="how" class="inops">How to play</div></div>
+<div id="opc" class="ops"><div id="rate" class="inops">Rate</div></div>
+<div id="opd" class="ops"><div id="lead" class="inops">Leaderboard</div></div>
+
+
+</body>
+</html>
+
+
