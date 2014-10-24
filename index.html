@@ -106,10 +106,10 @@ h1
 {
 	position:absolute;
 	color:white;
-	left:0%;
+	left:48%;
 	top:15%;
 	font-weight:bold;
-	font-size:150%;
+	font-size:220%;
 	text-shadow: 5px 5px 5px white;
 }
 body
@@ -260,7 +260,7 @@ var w=0;
 
 	var setdetect;
 	var setattack;
-var timer=3000;
+var timer=3100;
 
 var infoa="1. Hold an edge and drag to change the Width and Height of the Rectangle";
 var infob="2. Protect the Rectangle from the attacks by changing the Width and Height" ;
@@ -702,23 +702,12 @@ flag=0;
 
 });
 
-function demo(dt,dl,dh,dw)
-{
-speedbbb.animate({
-
-top:dt+"%",
-left:dl+"%",
-height:dh+"%",
-width:dw+"%"
 
 
-},800);
 
-
-}
 function gameover()
 {
-	timer=3000;
+	timer=3100;
 	$("h1").text("GAME OVER");
 	$("h1").fadeIn();
 
@@ -839,7 +828,7 @@ else if(bug==3)
 		if(((ta)>=tt&&(ta)<=(tt+hh))&&((la<=(ll+ww))&&((la+wa)>=ll)))
 		{
 				hits++;
-				scr.text(score+"bug="+bug+"ta="+ta+"tt="+tt+"hh="+hh);
+				scr.text(score);
 
 				gameover();
 
@@ -869,7 +858,7 @@ else if(bug==4)
 		if(((la)>=ll&&(la)<=(ll+ww))&&((ta<=(tt+hh))&&((ta+ha)>=tt)))
 		{
 				hits++;
-				scr.text(score+"bug="+bug+"la="+la+"ll="+ll+"ww="+ww);
+				scr.text(score);
 
 				gameover();
 
@@ -894,7 +883,7 @@ var timeradjust=function(){
 
 
 clearInterval(setattack);
-if(timer>2000)
+if(timer>2100)
 {
 
 timer=timer-200;
@@ -904,7 +893,7 @@ setattack=setInterval(timeradjust,timer+200);
 }
 else
 {
-attack(1800);
+attack(1900);
 setattack=setInterval(function(){attack(timer-200);},timer);
 }
 
