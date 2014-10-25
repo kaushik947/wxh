@@ -16,7 +16,5 @@
     <author href="https://build.phonegap.com" email="kaushik7ronaldo@gmail.com.com">
       Kaushik 
     </author>
-     <gap:plugin name="org.apache.cordova.vibration" version="0.3.7" />
-     <gap:plugin name="org.apache.cordova.dialogs" version="0.2.6" />
      <gap:plugin name="org.apache.cordova.media" version="0.2.8" />
 </widget>
