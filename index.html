@@ -525,7 +525,6 @@ el[0].addEventListener("touchmove", function(event) {
  
   diffy = (event.changedTouches[0].pageY);
  
-speeda.clearQueue();
 
 if(flag==1)
 {
@@ -540,7 +539,7 @@ if(flag==1)
                        ,height:tp-diffy
 
 
-                   },1);
+                   },{queue:false,duration:1});
 
 
 
@@ -557,7 +556,7 @@ else
                        ,height:(diffy)-tp
 
 
-                   },1);
+                   },{queue:false,duration:1});
 }
 }
 else if(flag==2)
@@ -573,7 +572,7 @@ else if(flag==2)
                        ,height:h+tp-diffy
 
 
-                   },1);
+                   },{queue:false,duration:1});
 
 
 
@@ -590,7 +589,7 @@ else
                        ,height:(diffy)-(tp+h)
 
 
-                   },1);
+                   },{queue:false,duration:1});
 }
 
 
@@ -612,7 +611,7 @@ else if(flag==3)
                        ,width:lef-diffx
 
 
-                   },1);
+                   },{queue:false,duration:1});
 
 
 
@@ -629,7 +628,7 @@ else
                        ,width:(diffx)-lef
 
 
-                   },1);
+                   },{queue:false,duration:1});
 }
 }
 
@@ -651,7 +650,7 @@ else if(flag==4)
                        ,width:w+lef-diffx
 
 
-                   },1);
+                   },{queue:false,duration:1});
 
 
 
@@ -668,7 +667,7 @@ else
                        ,width:(diffx)-(lef+w)
 
 
-                   },1);
+                   },{queue:false,duration:1});
 }
 
 
