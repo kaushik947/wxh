@@ -17,5 +17,7 @@
       Kaushik 
     </author>
     <preference name="Fullscreen" value="true" />
+    <preference name="DisallowOverscroll" value="true"/>
+    <preference name="Orientation" value="portrait" />
      <gap:plugin name="org.apache.cordova.media" version="0.2.8" />
 </widget>
