@@ -295,16 +295,16 @@ scr=$("#score");
     var htplay=$("#opb");
      var back=$("#backop");
 setTimeout(function(){
-speedbbb.fadeIn();
+speedbbb.velocity({opacity:1},{duration:500});
 
 speedbbb.velocity({top:'25%',height:'0%'},280).velocity({height:'15%'},280) .velocity({top:'40%',height:'0%'},280) .velocity({height:'20%'},280)
 .velocity({width:'20%'},280) .velocity({left:'30%',width:'0%'},280) .velocity({width:'30%'},280) .velocity({left:'60%',width:'0%'},280) .velocity({width:'30%'},280)  .velocity({top:'60%',height:'0%'},280) .velocity({height:'20%'},280) 
 .velocity({width:'0%'},280) .velocity({left:'45%',width:'20%'},280) .velocity({height:'0%'},280)
 .velocity({top:'40%',height:'20%'},280,function (){
 
-speedbbb.fadeOut();
+speedbbb.velocity({opacity:0},{duration:500});
 $("h1").text("WIDTH x HEIGHT");
-$("h1"). fadeIn();
+$("h1").velocity({opacity:1},{duration:500});
 
 
 $("#opa").velocity({left:'-3%'},500);
@@ -324,16 +324,16 @@ back[0].addEventListener('touchstart',
 function() {
 
 
-speedbbb.fadeOut(1000,function(){
+speedbbb.velocity({opacity:0},{duration:1000,complete:function(){
 
 speedbbb.css("left","45%");
 speedbbb.css("top","40%");
 speedbbb.css("height","20%");
 speedbbb.css("width","20%");});
 
-$("#info").fadeOut();
+$("#info").velocity({opacity:0},{duration:500});
 $("#info").html("");
-$("#backop").fadeOut();
+$("#backop").velocity({opacity:0},{duration:500});
 $("#opa").velocity({left:'-3%'},500);
 
 $("#opb").velocity({left:'53%'},500);
@@ -342,16 +342,16 @@ $("#opc").velocity({top:'75%'},500);
 
 $("#opd").velocity({top:'75%'},500);
 $("h1").text("WIDTH x HEIGHT");
-$("h1").fadeIn();
+$("h1").velocity({opacity:1},{duration:500});
 
-},false);
+}});
 
 
 htplay[0].addEventListener('touchstart',
 function() {
 	
-scr.fadeOut();
-$("h1").fadeOut();
+scr.velocity({opacity:0},{duration:500});
+$("h1").velocity({opacity:0},{duration:500});
 
 $("#opa").velocity({left:'-55%'},500);
 
@@ -361,16 +361,16 @@ $("#opc").velocity({top:'105%'},500);
 
 $("#opd").velocity({top:'105%'},500);
 
-speedbbb.fadeIn();
+speedbbb.velocity({opacity:1},{duration:500});
 $("#info").text(infoa);
-$("#info").fadeIn();
+$("#info").velocity({opacity:1},{duration:500});
 
 speedbbb.velocity({left:'65%',width:'0%'},650).velocity({width:'20%'},650).velocity({height:'0%'},650).velocity({top:'20%',height:'20%'},650).velocity({width:'0%'},650,function(){
-$("#info").fadeOut(function(){
+$("#info").velocity({opacity:0},{duration:500,complete:function(){
 $("#info").html(infoa+"<br />"+infob);
-$("#info").fadeIn();
+$("#info").velocity({opacity:1},{duration:500});
 
-});
+}});
 
 }).velocity({left:'45%',width:'20%'},650,function(){
 
@@ -397,7 +397,7 @@ speedb.css("left","50%");
 
 }).velocity({width:'0%'},650).velocity({left:'25%',width:'20%'},650,function(){
 
-$("#backop").fadeIn();
+$("#backop").velocity({opacity:1},{duration:500});
 
 
 });
@@ -413,8 +413,8 @@ play[0].addEventListener('touchstart', function() {
 	    	media=new Media("/android_asset/www/flyby-Conor-1500306612.mp3");
 		
 	
-scr.fadeOut();
-$("h1").fadeOut();
+scr.velocity({opacity:0},{duration:500});
+$("h1").velocity({opacity:0},{duration:500});
 
 $("#opa").velocity({left:'-55%'},500);
 
@@ -435,7 +435,7 @@ $("#opd").velocity({top:'105%'},500);
 		speeda.css("height","20%");
 		
 setTimeout(function(){
-speeda.fadeIn();
+speeda.velocity({opacity:1},{duration:500});
 
 
 setdetect=setInterval(detect,1);
@@ -702,13 +702,13 @@ function gameover()
 {
 	timer=3000;
 	$("h1").text("GAME OVER");
-	$("h1").fadeIn();
+	$("h1").velocity({opacity:1},{duration:500});
 
 		clearInterval(setdetect);
 		clearInterval(setattack);
 
-		scr.fadeIn();	
-		speeda.fadeOut();
+		scr.velocity({opacity:1},{duration:500});	
+		speeda.velocity({opacity:0},{duration:500});
 	
 
 $("#opa").velocity({left:'-3%'},500);
