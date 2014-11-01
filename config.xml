@@ -16,8 +16,8 @@
     <author href="https://build.phonegap.com" email="kaushik7ronaldo@gmail.com.com">
       Kaushik 
     </author>
+    <preference name="Orientation" value="portrait" />
     <preference name="Fullscreen" value="true" />
     <preference name="DisallowOverscroll" value="true"/>
-    <preference name="Orientation" value="portrait" />
      <gap:plugin name="org.apache.cordova.media" version="0.2.8" />
 </widget>
