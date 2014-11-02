@@ -210,8 +210,9 @@ document.addEventListener("deviceready", onDeviceReady, false);
     // device APIs are available
     //
     var media;
+    var highscore;
     function onDeviceReady() {
-    	
+    	highscore=window.localStorage.getItem("key");
 
         		     }
     
@@ -341,7 +342,7 @@ $("#opb").velocity({left:'53%'},500);
 $("#opc").velocity({top:'75%'},500);
 
 $("#opd").velocity({top:'75%'},500);
-$("h1").text("WIDTH x HEIGHT");
+$("h1").text("WIDTH x HEIGHT"+highscore);
 $("h1").fadeIn();
 
 },false);
