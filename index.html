@@ -24,7 +24,7 @@ left:20%;
 top:70%;
 border-radius:15%;
 color:black;
-opacity:0;
+display:none;
 }
 
 #back
@@ -100,7 +100,7 @@ h1
    vertical-align:middle;
 	color:white;
 	text-shadow: 5px 5px 5px white;
-	opacity:0;
+	display:none;
 }
 #score
 {
@@ -111,7 +111,6 @@ h1
 	font-weight:bold;
 	font-size:180%;
 	text-shadow: 5px 5px 5px white;
-	opacity:0;
 }
 body
 {
@@ -131,7 +130,7 @@ border: 3px solid white;
 background:black;
 width:20%;
 height:20%;
-opacity:0;
+display:none;
 
 
 }
@@ -145,7 +144,7 @@ border: 3px solid white;
 background:black;
 width:15%;
 height:15%;
-opacity:0;
+display:none;
 
 
 }
@@ -304,16 +303,16 @@ scr=$("#score");
     var htplay=$("#opb");
      var back=$("#backop");
 setTimeout(function(){
-speedbbb.velocity({opacity:1},500);
+speedbbb.fadeIn();
 
 speedbbb.velocity({top:'25%',height:'0%'},280).velocity({height:'15%'},280) .velocity({top:'40%',height:'0%'},280) .velocity({height:'20%'},280)
 .velocity({width:'20%'},280) .velocity({left:'30%',width:'0%'},280) .velocity({width:'30%'},280) .velocity({left:'60%',width:'0%'},280) .velocity({width:'30%'},280)  .velocity({top:'60%',height:'0%'},280) .velocity({height:'20%'},280) 
 .velocity({width:'0%'},280) .velocity({left:'45%',width:'20%'},280) .velocity({height:'0%'},280)
 .velocity({top:'40%',height:'20%'},280,function (){
 
-speedbbb.velocity({opacity:0},500);
+speedbbb.fadeOut();
 $("h1").text("WIDTH x HEIGHT");
-$("h1").velocity({opacity:1},500);
+$("h1"). fadeIn();
 
 
 $("#opa").velocity({left:'-3%'},500);
@@ -333,16 +332,16 @@ back[0].addEventListener('touchstart',
 function() {
 
 
-speedbbb.velocity({opacity:0},500,function(){
+speedbbb.fadeOut(1000,function(){
 
 speedbbb.css("left","45%");
 speedbbb.css("top","40%");
 speedbbb.css("height","20%");
 speedbbb.css("width","20%");});
 
-$("#info").velocity{(opacity:0),500};
+$("#info").fadeOut();
 $("#info").html("");
-$("#backop").velocity({opacity:0},500);
+$("#backop").fadeOut();
 $("#opa").velocity({left:'-3%'},500);
 
 $("#opb").velocity({left:'53%'},500);
@@ -351,7 +350,7 @@ $("#opc").velocity({top:'75%'},500);
 
 $("#opd").velocity({top:'75%'},500);
 $("h1").text("WIDTH x HEIGHT");
-$("h1").velocity({opacity:1},500);
+$("h1").fadeIn();
 
 },false);
 
@@ -359,8 +358,8 @@ $("h1").velocity({opacity:1},500);
 htplay[0].addEventListener('touchstart',
 function() {
 	
-scr.velocity({opacity:0},500);
-$("h1").velocity({opacity:0},500);
+scr.fadeOut();
+$("h1").fadeOut();
 
 $("#opa").velocity({left:'-55%'},500);
 
@@ -370,14 +369,14 @@ $("#opc").velocity({top:'105%'},500);
 
 $("#opd").velocity({top:'105%'},500);
 
-speedbbb.velocity({opacity:1},500);
+speedbbb.fadeIn();
 $("#info").text(infoa);
-$("#info").velocity({opacity:1},500);
+$("#info").fadeIn();
 
 speedbbb.velocity({left:'65%',width:'0%'},650).velocity({width:'20%'},650).velocity({height:'0%'},650).velocity({top:'20%',height:'20%'},650).velocity({width:'0%'},650,function(){
-$("#info").velocity({opacity:0},500,function(){
+$("#info").fadeOut(function(){
 $("#info").html(infoa+"<br />"+infob);
-$("#info").velocity({opacity:1},500);
+$("#info").fadeIn();
 
 });
 
@@ -406,7 +405,7 @@ speedb.css("left","50%");
 
 }).velocity({width:'0%'},650).velocity({left:'25%',width:'20%'},650,function(){
 
-$("#backop").velocity({opacity:1},500);
+$("#backop").fadeIn();
 
 
 });
@@ -422,8 +421,8 @@ play[0].addEventListener('touchstart', function() {
 	    	media=new Media("/android_asset/www/flyby-Conor-1500306612.mp3");
 		
 	
-scr.velocity({opacity:0},500);
-$("h1").velocity({opacity:0},500);
+scr.fadeOut();
+$("h1").fadeOut();
 
 $("#opa").velocity({left:'-55%'},500);
 
@@ -444,7 +443,7 @@ $("#opd").velocity({top:'105%'},500);
 		speeda.css("height","20%");
 		
 setTimeout(function(){
-speeda.velocity({opacity:1},500);
+speeda.fadeIn();
 
 
 setdetect=setInterval(detect,1);
@@ -711,13 +710,13 @@ function gameover()
 {
 	timer=3000;
 	$("h1").text("GAME OVER");
-	$("h1").velocity({opacity:1},500);
+	$("h1").fadeIn();
 
 		clearInterval(setdetect);
 		clearInterval(setattack);
 
-		scr.velocity({opacity:1},500);	
-		speeda.velocity({opacity:0},500);
+		scr.fadeIn();	
+		speeda.fadeOut();
 	
 
 $("#opa").velocity({left:'-3%'},500);
