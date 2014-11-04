@@ -211,19 +211,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
     //
     var media;
     var highscore;
-    function onDeviceReady() {
-    	highscore=window.localStorage.getItem("highscore");
-
-	if(!highscore)
-	{
-		window.localStorage.setItem("highscore",0)
-		highscore=window.localStorage.getItem("highscore");
-		
-	}
-
-        		     }
     
-    	
+    
 var speeda;
 var speedbbb;
 var speedt;
@@ -279,10 +268,6 @@ var infoa="1. Hold an edge and drag to change the Width and Height of the Rectan
 var infob="2. Protect the Rectangle from the attacks by changing the Width and Height" ;
 
 
-$(document).ready(function(){
-	
-	
-	
 speeda=$("#a");
 speedbbb=$("#bbb");
 speedt=$("#t");
@@ -302,33 +287,23 @@ scr=$("#score");
 	var play=$("#opa");
     var htplay=$("#opb");
      var back=$("#backop");
-setTimeout(function(){
-speedbbb.fadeIn();
+    
+    
+var diffx,diffy,startX,offsetX,startY,offsetY,el = $(document);
 
-speedbbb.velocity({top:'25%',height:'0%'},280).velocity({height:'15%'},280) .velocity({top:'40%',height:'0%'},280) .velocity({height:'20%'},280)
-.velocity({width:'20%'},280) .velocity({left:'30%',width:'0%'},280) .velocity({width:'30%'},280) .velocity({left:'60%',width:'0%'},280) .velocity({width:'30%'},280)  .velocity({top:'60%',height:'0%'},280) .velocity({height:'20%'},280) 
-.velocity({width:'0%'},280) .velocity({left:'45%',width:'20%'},280) .velocity({height:'0%'},280)
-.velocity({top:'40%',height:'20%'},280,function (){
+    function onDeviceReady() {
+    	highscore=window.localStorage.getItem("highscore");
 
-speedbbb.fadeOut();
-$("h1").text("WIDTH x HEIGHT");
-$("h1"). fadeIn();
+	if(!highscore)
+	{
+		window.localStorage.setItem("highscore",0)
+		highscore=window.localStorage.getItem("highscore");
+		
+	}
 
-
-$("#opa").velocity({left:'-3%'},500);
-
-$("#opb").velocity({left:'53%'},500);
-
-$("#opc").velocity({top:'75%'},500);
-
-$("#opd").velocity({top:'75%'},500);
-
-});
-
-},200); 
-
-
-back[0].addEventListener('touchstart',
+        		     }
+        		     
+        		     back[0].addEventListener('touchstart',
 function() {
 
 
@@ -353,6 +328,8 @@ $("h1").text("WIDTH x HEIGHT");
 $("h1").fadeIn();
 
 },false);
+        		     
+        
 
 
 htplay[0].addEventListener('touchstart',
@@ -469,8 +446,6 @@ setattack=setInterval(timeradjust,3000);
 	
 	
 
-
-var diffx,diffy,startX,offsetX,startY,offsetY,el = $(document);
 
 
 
@@ -699,6 +674,40 @@ flag=0;
 
 
 },false);
+		     
+        		     
+    
+    	
+$(document).ready(function(){
+	
+	
+	
+setTimeout(function(){
+speedbbb.fadeIn();
+
+speedbbb.velocity({top:'25%',height:'0%'},280).velocity({height:'15%'},280) .velocity({top:'40%',height:'0%'},280) .velocity({height:'20%'},280)
+.velocity({width:'20%'},280) .velocity({left:'30%',width:'0%'},280) .velocity({width:'30%'},280) .velocity({left:'60%',width:'0%'},280) .velocity({width:'30%'},280)  .velocity({top:'60%',height:'0%'},280) .velocity({height:'20%'},280) 
+.velocity({width:'0%'},280) .velocity({left:'45%',width:'20%'},280) .velocity({height:'0%'},280)
+.velocity({top:'40%',height:'20%'},280,function (){
+
+speedbbb.fadeOut();
+$("h1").text("WIDTH x HEIGHT");
+$("h1"). fadeIn();
+
+
+$("#opa").velocity({left:'-3%'},500);
+
+$("#opb").velocity({left:'53%'},500);
+
+$("#opc").velocity({top:'75%'},500);
+
+$("#opd").velocity({top:'75%'},500);
+
+});
+
+},200); 
+
+
 
 
 });
