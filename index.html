@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.ops
+{
+background:white;
+position:absolute;
+width:50%;
+height:10%;
+
+border-radius:15%;
+color:black;
+
+}
+
+#backop
+{
+position:absolute;
+background:white;
+width:14%;
+height:7%;
+left:20%;
+top:70%;
+border-radius:15%;
+color:black;
+display:none;
+}
+
+#back
+{
+
+font-size:120%;
+ text-shadow: 5px 5px 5px black;
+text-align:center;
+}
+
+
+
+#opa
+{
+left:-55%;
+top:55%;
+}
+#opb
+{
+left:105%;
+top:55%;
+}
+#opc
+{
+left:-3%;
+top:105%;
+}
+#opd
+{
+left:53%;
+top:105%;
+}
+
+#play
+{
+text-align:right;
+}
+#how
+{
+text-align:left;
+}
+#rate
+{
+text-align:right;
+}
+#lead
+{
+text-align:left;
+}
+.inops
+{
+
+font-size:120%;
+ text-shadow: 5px 5px 5px black;
+}
+#info
+{
+position:absolute;
+font-size:150%;
+ text-shadow: 5px 5px 5px white;
+color:white;
+}
+
+p
+{
+color:red;
+
+
+}
+h1
+{
+   text-align: center;
+   vertical-align:middle;
+	color:white;
+	text-shadow: 5px 5px 5px white;
+	display:none;
+}
+#score
+{
+	position:absolute;
+	color:white;
+	left:0%;
+	top:15%;
+	font-weight:bold;
+	font-size:180%;
+	text-shadow: 5px 5px 5px white;
+}
+body
+{
+background:black;
+max-width:100%;
+max-height:100%;
+overflow:hidden;
+
+
+}
+#a
+{
+position:absolute;
+left:40%;
+top:40%;
+border: 3px solid white;
+background:black;
+width:20%;
+height:20%;
+opacity:0;
+
+
+}
+
+#bbb
+{
+position:absolute;
+left:10%;
+top:10%;
+border: 3px solid white;
+background:black;
+width:15%;
+height:15%;
+display:none;
+
+
+}
+
+#t
+{
+	display:none;
+position:absolute;
+left:50%;
+top:-2%;
+width: 0px;
+	height: 0px;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 10px solid white;
+background:none;
+}
+#l
+{
+	display:none;
+position:absolute;
+left:-2%;
+top:50%;
+width: 0px;
+	height: 0px;
+	border-top: 5px solid transparent;
+	border-left: 10px solid white;
+	border-bottom: 5px solid transparent;
+background:none;
+}#r
+{
+	display:none;
+position:absolute;
+left:100%;
+top:50%;
+  width: 0px;
+	height: 0px;
+	border-top: 5px solid transparent;
+	border-right: 10px solid white;
+	border-bottom: 5px solid transparent;
+background:none;
+
+}#b
+{
+	display:none;
+position:absolute;
+left:50%;
+top:100%;
+width: 0px;
+	height: 0px;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 10px solid white;
+background:none;
+}
+</style>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script src="./myjq.js"></script>
+<script src="./velocity.js"></script>
+<script>
+document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    var media;
+    var highscore;
+    function onDeviceReady() {
+    	highscore=window.localStorage.getItem("highscore");
+
+	if(!highscore)
+	{
+		window.localStorage.setItem("highscore",0)
+		highscore=window.localStorage.getItem("highscore");
+		
+	}
+
+        		     }
+    
+    	
+var speeda;
+var speedbbb;
+var speedt;
+var speedl;
+var speedb;
+var speedr;
+var scr;
+var variationw;
+var variationh;
+
+
+
+
+var hits=0;
+var la;
+var ta;
+var ha;
+var wa;
+
+
+var x;
+var y;
+
+
+var ll;
+var tt;
+var hh;
+var ww;
+
+
+var score=-1;
+
+
+var l;
+var t;
+var ht;
+var wt;
+var bug=0;
+
+
+var flag=0;
+var lef=0;
+var tp=0;
+var h=0;
+var w=0;
+
+
+	var setdetect;
+	var setattack;
+var timer=3000;
+
+var infoa="1. Hold an edge and drag to change the Width and Height of the Rectangle";
+var infob="2. Protect the Rectangle from the attacks by changing the Width and Height" ;
+
+
+$(document).ready(function(){
+	
+	
+	
+speeda=$("#a");
+speedbbb=$("#bbb");
+speedt=$("#t");
+speedl=$("#l");
+speedb=$("#b");
+speedr=$("#r");
+scr=$("#score");
+
+
+	variationw=speedt.width();
+
+
+	variationh=speedl.height();
+
+
+	
+	var play=$("#opa");
+    var htplay=$("#opb");
+     var back=$("#backop");
+setTimeout(function(){
+speedbbb.fadeIn();
+
+speedbbb.velocity({top:'25%',height:'0%'},280).velocity({height:'15%'},280) .velocity({top:'40%',height:'0%'},280) .velocity({height:'20%'},280)
+.velocity({width:'20%'},280) .velocity({left:'30%',width:'0%'},280) .velocity({width:'30%'},280) .velocity({left:'60%',width:'0%'},280) .velocity({width:'30%'},280)  .velocity({top:'60%',height:'0%'},280) .velocity({height:'20%'},280) 
+.velocity({width:'0%'},280) .velocity({left:'45%',width:'20%'},280) .velocity({height:'0%'},280)
+.velocity({top:'40%',height:'20%'},280,function (){
+
+speedbbb.fadeOut();
+$("h1").text("WIDTH x HEIGHT");
+$("h1"). fadeIn();
+
+
+$("#opa").velocity({left:'-3%'},500);
+
+$("#opb").velocity({left:'53%'},500);
+
+$("#opc").velocity({top:'75%'},500);
+
+$("#opd").velocity({top:'75%'},500);
+
+});
+
+},200); 
+
+
+back[0].addEventListener('touchstart',
+function() {
+
+
+speedbbb.fadeOut(1000,function(){
+
+speedbbb.css("left","45%");
+speedbbb.css("top","40%");
+speedbbb.css("height","20%");
+speedbbb.css("width","20%");});
+
+$("#info").fadeOut();
+$("#info").html("");
+$("#backop").fadeOut();
+$("#opa").velocity({left:'-3%'},500);
+
+$("#opb").velocity({left:'53%'},500);
+
+$("#opc").velocity({top:'75%'},500);
+
+$("#opd").velocity({top:'75%'},500);
+$("h1").text("WIDTH x HEIGHT");
+$("h1").fadeIn();
+
+},false);
+
+
+htplay[0].addEventListener('touchstart',
+function() {
+	
+scr.fadeOut();
+$("h1").fadeOut();
+
+$("#opa").velocity({left:'-55%'},500);
+
+$("#opb").velocity({left:'105%'},500);
+
+$("#opc").velocity({top:'105%'},500);
+
+$("#opd").velocity({top:'105%'},500);
+
+speedbbb.fadeIn();
+$("#info").text(infoa);
+$("#info").fadeIn();
+
+speedbbb.velocity({left:'65%',width:'0%'},650).velocity({width:'20%'},650).velocity({height:'0%'},650).velocity({top:'20%',height:'20%'},650).velocity({width:'0%'},650,function(){
+$("#info").fadeOut(function(){
+$("#info").html(infoa+"<br />"+infob);
+$("#info").fadeIn();
+
+});
+
+}).velocity({left:'45%',width:'20%'},650,function(){
+
+speedr.css("top","30%");
+speedr.show();
+speedr.velocity({left:'-2%'},1800,function(){
+speedr.hide();
+speedr.css("top","50%");
+speedr.css("left","100%");
+
+});
+}).velocity({top:'40%',height:'0%'},650).velocity({height:'20%'},650,function(){
+
+
+speedb.css("left","55%");
+speedb.show();
+speedb.velocity({top:'-2%'},1800,function(){
+speedb.hide();
+speedb.css("top","100%");
+speedb.css("left","50%");
+
+
+});
+
+}).velocity({width:'0%'},650).velocity({left:'25%',width:'20%'},650,function(){
+
+$("#backop").fadeIn();
+
+
+});
+
+
+
+
+},false);
+play[0].addEventListener('touchstart', function() {
+	
+
+	
+	    	media=new Media("/android_asset/www/flyby-Conor-1500306612.mp3");
+		
+	
+scr.fadeOut();
+$("h1").fadeOut();
+
+$("#opa").velocity({left:'-55%'},500);
+
+$("#opb").velocity({left:'105%'},500);
+
+$("#opc").velocity({top:'105%'},500);
+
+$("#opd").velocity({top:'105%'},500);
+
+
+	speeda.css("left","40%");
+
+		speeda.css("top","40%");
+		
+
+		speeda.css("width","20%");
+		
+		speeda.css("height","20%");
+		
+setTimeout(function(){
+speeda.velocity({opacity:1},500);
+
+
+setdetect=setInterval(detect,1);
+
+setattack=setInterval(timeradjust,3000);
+
+
+
+		     },800);
+
+	
+	},false);
+	
+
+
+	
+
+	
+
+
+
+	
+	
+	
+
+
+var diffx,diffy,startX,offsetX,startY,offsetY,el = $(document);
+
+
+
+
+el[0].addEventListener('touchstart', function(event) {
+ 
+ event.preventDefault();
+ 
+ //  offsetX = ($(window).width()-el.outerWidth(true))/2;
+  startX = event.targetTouches[0].pageX;
+ 
+  // offsetY = ($(window).height()-el.outerHeight(true))/2;
+  startY = event.targetTouches[0].pageY;
+ 
+
+ lef=parseInt(speeda.css("left"),10);
+ tp=parseInt(speeda.css("top"),10);
+ h=speeda.height();
+ w=speeda.width();
+
+
+
+if(startX>=lef&&startX<=(lef+w)&&startY<=(tp+h+60)&&startY>=(tp+(2*h/3)))
+{
+    	flag=1;
+//	navigator.notification.vibrate(12);
+}
+else if(startX>=lef&&startX<=(lef+w)&&startY<=(tp+(h/3))&&startY>=(tp-60))
+ {
+ 	flag=2;
+//	navigator.notification.vibrate(12);
+}
+else if(startY>=tp&&startY<=(tp+h)&&startX<=(lef+w+60)&&startX>=(lef+(2*w/3)))
+{
+	flag=3;
+//	navigator.notification.vibrate(12);
+}
+else if(startY>=tp&&startY<=(tp+h)&&startX<=(lef+(w/3))&&startX>=(lef-60))
+{
+	flag=4;
+//	navigator.notification.vibrate(12);
+}
+
+    
+
+
+
+},false);
+
+
+
+
+el[0].addEventListener("touchmove", function(event) {
+
+
+ 
+ event.preventDefault();
+ 
+  diffx = (event.changedTouches[0].pageX);
+ 
+  diffy = (event.changedTouches[0].pageY);
+ 
+
+if(flag==1)
+{
+
+
+    if(diffy<tp)
+{
+
+
+    speeda.velocity({
+                       top:diffy
+                       ,height:tp-diffy
+
+
+                   },{duration:1,easing:"linear",mobileHA:true});
+
+
+
+
+
+
+}
+
+
+else
+{
+    speeda.velocity({
+                       top:tp
+                       ,height:(diffy)-tp
+
+
+                   },{duration:1,easing:"linear",mobileHA:true});
+}
+}
+else if(flag==2)
+{
+
+
+    if(diffy<tp+h)
+{
+
+
+    speeda.velocity({
+                       top:diffy
+                       ,height:h+tp-diffy
+
+
+                   },{duration:1,easing:"linear",mobileHA:true});
+
+
+
+
+
+
+}
+
+
+else
+{
+    speeda.velocity({
+                       top:tp+h
+                       ,height:(diffy)-(tp+h)
+
+
+                   },{duration:1,easing:"linear",mobileHA:true});
+}
+
+
+}
+
+
+
+
+else if(flag==3)
+{
+
+
+    if(diffx<lef)
+{
+
+
+    speeda.velocity({
+                       left:diffx
+                       ,width:lef-diffx
+
+
+                   },{duration:1,easing:"linear",mobileHA:true});
+
+
+
+
+
+
+}
+
+
+else
+{
+    speeda.velocity({
+                       left:lef
+                       ,width:(diffx)-lef
+
+
+                   },{duration:1,easing:"linear",mobileHA:true});
+}
+}
+
+
+
+
+else if(flag==4)
+{
+
+
+
+
+    if(diffx<lef+w)
+{
+
+
+    speeda.velocity({
+                       left:diffx
+                       ,width:w+lef-diffx
+
+
+                   },{duration:1,easing:"linear",mobileHA:true});
+
+
+
+
+
+
+}
+
+
+else
+{
+    speeda.velocity({
+                       left:lef+w
+                       ,width:(diffx)-(lef+w)
+
+
+                   },{duration:1,easing:"linear",mobileHA:true});
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+},false);
+
+
+el[0].addEventListener("touchend", function(e) {
+ e.preventDefault();
+flag=0;
+
+
+},false);
+
+
+});
+
+
+
+
+function gameover()
+{
+	timer=3000;
+	$("h1").text("GAME OVER");
+	$("h1").fadeIn();
+
+		clearInterval(setdetect);
+		clearInterval(setattack);
+
+		scr.fadeIn();	
+		speeda.velocity({opacity:0},500);
+	
+
+$("#opa").velocity({left:'-3%'},500);
+
+$("#opb").velocity({left:'53%'},500);
+
+$("#opc").velocity({top:'75%'},500);
+
+$("#opd").velocity({top:'75%'},500);
+
+
+if(score>highscore)
+{
+	highscore=score;
+	window.localStorage.setItem("highscore",highscore);
+	
+}
+
+
+scr.text("Score="+score+",HighScore="+highscore);
+
+score=-1;
+
+
+	
+
+		
+	
+}
+
+
+function detect(){
+
+
+
+
+ ll=parseInt(speeda.css("left"),10);
+ tt=parseInt(speeda.css("top"),10);
+ hh=speeda.height();
+ ww=speeda.width();
+
+
+
+
+
+
+if(bug==1)
+	{
+
+
+ la=parseInt(speedt.css("left"),10);
+ ta=parseInt(speedt.css("top"),10);
+ ha=speedt.height();
+ wa=speedt.width();
+
+
+
+
+		if(((ta+ha)>=tt&&(ta+ha)<=(tt+hh))&&((la<=(ll+ww))&&((la+wa)>=ll)))
+		{
+				hits++;
+			
+				gameover();
+
+
+		}
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+else if(bug==2)
+	{
+
+
+ la=parseInt(speedl.css("left"),10);
+ ta=parseInt(speedl.css("top"),10);
+ ha=speedl.height();
+ wa=speedl.width();
+
+
+
+
+		if(((la+wa)>=ll&&(la+wa)<=(ll+ww))&&((ta<=(tt+hh))&&((ta+ha)>=tt)))
+		{
+				hits++;
+			
+
+				gameover();
+
+
+		}
+
+
+
+
+
+
+	}
+
+
+else if(bug==3)
+	{
+
+
+ la=parseInt(speedb.css("left"),10);
+ ta=parseInt(speedb.css("top"),10);
+ ha=speedb.height();
+ wa=speedb.width();
+
+
+
+
+		if(((ta)>=tt&&(ta)<=(tt+hh))&&((la<=(ll+ww))&&((la+wa)>=ll)))
+		{
+				hits++;
+			
+
+				gameover();
+
+
+		}
+
+
+
+
+
+
+	}
+
+
+else if(bug==4)
+	{
+
+
+ la=parseInt(speedr.css("left"),10);
+ ta=parseInt(speedr.css("top"),10);
+ ha=speedr.height();
+ wa=speedr.width();
+
+
+
+
+		if(((la)>=ll&&(la)<=(ll+ww))&&((ta<=(tt+hh))&&((ta+ha)>=tt)))
+		{
+				hits++;
+			
+
+				gameover();
+
+		}
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+}
+
+
+var timeradjust=function(){
+
+
+clearInterval(setattack);
+if(timer>2000)
+{
+
+timer=timer-200;
+attack(timer);
+
+setattack=setInterval(timeradjust,timer+200);
+}
+else
+{
+attack(1800);
+setattack=setInterval(function(){attack(timer-200);},timer);
+}
+
+
+}
+
+
+
+
+
+function attack(attspeed){
+
+media.play();
+
+
+
+ l=parseInt(speeda.css("left"),10);
+ t=parseInt(speeda.css("top"),10);
+ ht=speeda.height();
+ wt=speeda.width();
+
+
+ 
+
+
+  y = Math.floor((Math.random() * 10)+1);
+
+
+  x = Math.floor((Math.random() * 10));
+
+
+if(y>5)
+y=y-5;
+
+
+var k1=l+((wt*(y-1))/4)-(variationw/2);
+var k2=t+((ht*(y-1))/4)-(variationh/2);
+
+
+
+if(x==0||x==4||x==8)
+{
+	speedt.css("left",k1);
+speedt.show();
+	bug=1;
+speedt.velocity({
+top:'100%'
+},{duration:attspeed,complete:function(){
+
+bug=0;
+speedt.hide();
+speedt.css("top","-2%");
+
+
+}});
+
+
+}
+
+
+else if(x==1||x==5||x==9)
+{
+	speedl.css("top",k2);
+speedl.show();
+	bug=2;
+speedl.velocity({
+left:'100%'
+},{duration:attspeed,complete:function(){
+
+
+bug=0;
+speedl.hide();
+speedl.css("left","-2%");
+
+
+}});
+
+
+}
+else if(x==2||x==6)
+{
+	speedb.css("left",k1);
+speedb.show();
+	bug=3;
+speedb.velocity({
+top:'-2%'
+},{duration:attspeed,complete:function(){
+
+
+bug=0;
+speedb.hide();
+speedb.css("top","100%");
+
+
+}});
+
+
+
+
+}
+
+
+else if(x==3||x==7)
+{
+	speedr.css("top",k2);
+speedr.show();
+	bug=4;
+speedr.velocity({
+left:'-2%'
+},{duration:attspeed,complete:function(){
+
+
+bug=0;
+speedr.hide();
+speedr.css("left","100%");
+
+
+}});
+
+
+
+
+}
+score++;
+
+
+}
+
+
+
+
+
+</script>
+</head>
+<body>
+
+<h1></h1>
+
+
+
+<h2 id="score"></h2>
+<div id="info"></div>
+
+
+<div id="a"></div>
+<div id="bbb"></div>
+
+
+<div id="t"></div>
+
+
+<div id="l"></div>
+
+
+<div id="r"></div>
+
+
+<div id="b"></div>
+
+
+<div id="opa" class="ops"><div id="play" class="inops">Play</div></div>
+<div id="opb" class="ops"><div id="how" class="inops">How to play</div></div>
+<div id="opc" class="ops"><div id="rate" class="inops">Rate</div></div>
+<div id="opd" class="ops"><div id="lead" class="inops">Leaderboard</div></div>
+
+<div id="backop"><div id="back">Back</div></div>
+
+
+</body>
+</html>
+
+
