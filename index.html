@@ -147,7 +147,7 @@ overflow:hidden;
 position:absolute;
 left:40%;
 top:40%;
-border: 5px ridge white;
+border: 6px ridge white;
 background:none;
 width:20%;
 height:20%;
@@ -161,8 +161,8 @@ display:none;
 position:absolute;
 left:10%;
 top:10%;
-border: 3px solid white;
-background:black;
+border: 6px ridge white;
+background:none;
 width:15%;
 height:15%;
 display:none;
@@ -178,9 +178,9 @@ left:50%;
 top:-2%;
 width: 0px;
 	height: 0px;
-	border-left: 5px ridge transparent;
-	border-right: 5px ridge transparent;
-	border-top: 10px ridge white;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 10px solid white;
 background:none;
 }
 #l
@@ -322,7 +322,7 @@ livescr=$("#livescore");
 
 	variationh=speedl.height();
 
-
+infoa+=""+variationw+""+variationh+""+$(document).width()+""+$(document).height()+"";
 	
 	var play=$("#opa");
     var htplay=$("#opb");
@@ -330,10 +330,10 @@ livescr=$("#livescore");
 setTimeout(function(){
 speedbbb.fadeIn();
 
-speedbbb.velocity({top:'25%',height:'0%'},280).velocity({height:'15%'},280) .velocity({top:'40%',height:'0%'},280) .velocity({height:'20%'},280)
-.velocity({width:'20%'},280) .velocity({left:'30%',width:'0%'},280) .velocity({width:'30%'},280) .velocity({left:'60%',width:'0%'},280) .velocity({width:'30%'},280)  .velocity({top:'60%',height:'0%'},280) .velocity({height:'20%'},280) 
-.velocity({width:'0%'},280) .velocity({left:'45%',width:'20%'},280) .velocity({height:'0%'},280)
-.velocity({top:'40%',height:'20%'},280,function (){
+speedbbb.velocity({top:'25%',height:'0%'},150).velocity({height:'15%'},150) .velocity({top:'40%',height:'0%'},150) .velocity({height:'20%'},150)
+.velocity({width:'20%'},150) .velocity({left:'30%',width:'0%'},150) .velocity({width:'30%'},150) .velocity({left:'60%',width:'0%'},150) .velocity({width:'30%'},150).velocity({top:'60%',height:'0%'},150) .velocity({height:'20%'},150) 
+.velocity({width:'0%'},150) .velocity({left:'45%',width:'20%'},150) .velocity({height:'0%'},150)
+.velocity({top:'40%',height:'20%'},150,function (){
 
 
 
