@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
-    id          = "com.game.resizeme"
+    id          = "com.game.resizemet"
     versionCode = "10" 
     version     = "1.0.0" >
 
     <!-- versionCode is optional and Android only -->
 
-    <name>W x H</name>
+    <name>W x Ht</name>
 
     <description>
       Game
