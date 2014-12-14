@@ -585,8 +585,8 @@ el[0].addEventListener("touchmove", function(event) {
 if(flag!=0)
 {
 
-tchmove[0]=[l,w,(diffy<tp)?diffy:tp,Math.abs(tp-diffy)];
-tchmove[1]=[l,w,(diffy<tp+h)?diffy:tp+h,Math.abs(tp+h-diffy)];
+tchmove[0]=[lef,w,(diffy<tp)?diffy:tp,Math.abs(tp-diffy)];
+tchmove[1]=[lef,w,(diffy<tp+h)?diffy:tp+h,Math.abs(tp+h-diffy)];
 tchmove[2]=[(diffx<lef)?diffx:lef,Math.abs(lef-diffx),tp,h];
 tchmove[3]=[(diffx<lef+w)?diffx:lef+w,Math.abs(w+lef-diffx),tp,h];
 
