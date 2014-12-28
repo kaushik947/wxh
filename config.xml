@@ -20,8 +20,5 @@
     <preference name="Fullscreen" value="true" />
     <preference name="DisallowOverscroll" value="true"/>
      <gap:plugin name="org.apache.cordova.media" version="0.2.8" />
-     
-      <feature name="Whatsapp">
-        <param name="android-package" value="mobi.moica.whatsapp.Whatsapp" />
-    </feature>
+     <gap:plugin name="mobi.moica.whatsapp" version="0.0.1" />
 </widget>
