@@ -578,8 +578,7 @@ gmovr=0;
 	share[0].addEventListener('touchstart',function(event){
 	
 	message="My Score:"+curentscore+"\nMy Best:"+highscore;
-	window.plugins.socialsharing.share(message,image,link);
-
+window.plugins.socialsharing.shareViaWhatsApp(message,image /* img */,link/* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)});
 	
 	},false);
 
