@@ -8,6 +8,8 @@ width:8%;
 height:9%;
 top:15%;
 font-weight:bold;
+font-size:120%;
+ text-shadow: 5px 5px 5px black;
 
 display:none;
 
@@ -104,23 +106,6 @@ text-shadow: 5px 5px 5px black;
 }
 
 
-.inops
-{
-font-size:120%;
- text-shadow: 5px 5px 5px black;
-line-height:0%;
-
-
-}
-.iinops
-{
-font-size:120%;
- text-shadow: 5px 5px 5px black;
-line-height:0%;
-
-}
-
-
 
 .ops
 {
@@ -132,7 +117,8 @@ text-align:center;
 color:black;
 background:white;
 border-radius:10%;
-
+font-size:120%;
+ text-shadow: 5px 5px 5px black;
 }
 
 #backop
@@ -145,21 +131,9 @@ left:20%;
 top:75%;
 border-radius:15%;
 color:black;
-display:none;
-}
-.bkops
-{
 font-size:120%;
  text-shadow: 5px 5px 5px black;
-
-  margin: 0;
-    
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-
+display:none;
 }
 
 #opa
