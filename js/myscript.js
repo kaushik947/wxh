@@ -431,15 +431,14 @@ if(flag==1)
 {
 
 
-    speeda.animate({
+    speeda.velocity({
                        top:diffy
                        ,height:tp-diffy
 
 
-                   },1,"linear");
+                   },{duration:1,easing:"linear"});
 
 
-/*{duration:1,easing:"linear",mobileHA:true}*/
 
 
 
@@ -448,12 +447,12 @@ if(flag==1)
 
 else
 {
-    speeda.animate({
+    speeda.velocity({
                        top:tp
                        ,height:(diffy)-tp
 
 
-                   },1,"linear");
+                   },{duration:1,easing:"linear"});
 }
 }
 else if(flag==2)
@@ -464,12 +463,12 @@ else if(flag==2)
 {
 
 
-    speeda.animate({
+    speeda.velocity({
                        top:diffy
                        ,height:h+tp-diffy
 
 
-                   },1,"linear");
+                   },{duration:1,easing:"linear"});
 
 
 
@@ -481,12 +480,12 @@ else if(flag==2)
 
 else
 {
-    speeda.animate({
+    speeda.velocity({
                        top:tp+h
                        ,height:(diffy)-(tp+h)
 
 
-                   },1,"linear");
+                   },{duration:1,easing:"linear"});
 }
 
 
@@ -503,12 +502,12 @@ else if(flag==3)
 {
 
 
-    speeda.animate({
+    speeda.velocity({
                        left:diffx
                        ,width:lef-diffx
 
 
-                   },1,"linear");
+                   },{duration:1,easing:"linear"});
 
 
 
@@ -520,12 +519,12 @@ else if(flag==3)
 
 else
 {
-    speeda.animate({
+    speeda.velocity({
                        left:lef
                        ,width:(diffx)-lef
 
 
-                   },1,"linear");
+                   },{duration:1,easing:"linear"});
 }
 }
 
@@ -542,12 +541,12 @@ else if(flag==4)
 {
 
 
-    speeda.animate({
+    speeda.velocity({
                        left:diffx
                        ,width:w+lef-diffx
 
 
-                   },1,"linear");
+                   },{duration:1,easing:"linear"});
 
 
 
@@ -559,12 +558,12 @@ else if(flag==4)
 
 else
 {
-    speeda.animate({
+    speeda.velocity({
                        left:lef+w
                        ,width:(diffx)-(lef+w)
 
 
-                   },1,"linear");
+                   },{duration:1,easing:"linear"});
 }
 
 
