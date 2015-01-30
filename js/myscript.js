@@ -431,15 +431,15 @@ if(flag==1)
 {
 
 
-    speeda.velocity({
+    speeda.animate({
                        top:diffy
                        ,height:tp-diffy
 
 
-                   },{duration:1,easing:"linear",mobileHA:true});
+                   },1,"linear");
 
 
-
+/*{duration:1,easing:"linear",mobileHA:true}*/
 
 
 
@@ -453,7 +453,7 @@ else
                        ,height:(diffy)-tp
 
 
-                   },{duration:1,easing:"linear",mobileHA:true});
+                   },1,"linear");
 }
 }
 else if(flag==2)
@@ -469,7 +469,7 @@ else if(flag==2)
                        ,height:h+tp-diffy
 
 
-                   },{duration:1,easing:"linear",mobileHA:true});
+                   },1,"linear");
 
 
 
@@ -486,7 +486,7 @@ else
                        ,height:(diffy)-(tp+h)
 
 
-                   },{duration:1,easing:"linear",mobileHA:true});
+                   },1,"linear");
 }
 
 
@@ -508,7 +508,7 @@ else if(flag==3)
                        ,width:lef-diffx
 
 
-                   },{duration:1,easing:"linear",mobileHA:true});
+                   },1,"linear");
 
 
 
@@ -525,7 +525,7 @@ else
                        ,width:(diffx)-lef
 
 
-                   },{duration:1,easing:"linear",mobileHA:true});
+                   },1,"linear");
 }
 }
 
@@ -547,7 +547,7 @@ else if(flag==4)
                        ,width:w+lef-diffx
 
 
-                   },{duration:1,easing:"linear",mobileHA:true});
+                   },1,"linear");
 
 
 
@@ -564,7 +564,7 @@ else
                        ,width:(diffx)-(lef+w)
 
 
-                   },{duration:1,easing:"linear",mobileHA:true});
+                   },1,"linear");
 }
 
 
