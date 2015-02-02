@@ -329,7 +329,12 @@ gmovr=0;
 	share[0].addEventListener('touchstart',function(event){
 	
 	message="My Score:"+curentscore+"\nMy Best:"+highscore;
-window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp',image, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)});	
+
+		navigator.share("text","title","image/jpeg");
+
+
+		
+		
 	},false);
 
 	
