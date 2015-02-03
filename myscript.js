@@ -330,7 +330,7 @@ gmovr=0;
 	
 	message="My Score:"+curentscore+"\nMy Best:"+highscore;
 
-window.plugins.socialsharing.share('Message only','https://www.google.com','./myimg.jpg');
+window.plugins.socialsharing.share('Message only',null,'/android_asset/www/myimg.jpg','https://www.google.com');
 
 	},false);
 
