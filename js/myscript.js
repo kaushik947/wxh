@@ -330,8 +330,7 @@ gmovr=0;
 	
 	message="My Score:"+curentscore+"\nMy Best:"+highscore;
 
-window.plugins.socialsharing.shareViaFacebookWithPasteMessageHint('Message via Facebook', null /* img */, null /* url */, 'Paste it dude!', function() {console.log('share ok')}, function(errormsg){alert(errormsg)});
-
+window.plugins.socialsharing.share('Message, subject, image and link', 'The subject', 'www/myimg.jpg', 'http://www.x-services.nl');
 	},false);
 
 	
