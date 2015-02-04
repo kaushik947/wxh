@@ -330,7 +330,8 @@ gmovr=0;
 	
 	message="My Score:"+curentscore+"\nMy Best:"+highscore;
 
-window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)});
+window.plugins.socialsharing.shareViaFacebookWithPasteMessageHint('Message via Facebook', null /* img */, null /* url */, 'Paste it dude!', function() {console.log('share ok')}, function(errormsg){alert(errormsg)});
+
 	},false);
 
 	
