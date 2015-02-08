@@ -338,7 +338,7 @@ window.plugins.socialsharing.share(message,'WIDTH x HEIGHT',image,link);
 
 lead[0].addEventListener('touchstart',function(event){
 
-
+$(".n").hide();
 googleplaygame.auth();
 
 
