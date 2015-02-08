@@ -341,6 +341,19 @@ lead[0].addEventListener('touchstart',function(event){
 
 googleplaygame.auth();
 
+googleplaygame.isSignedIn(function (result) {
+    // ‘result’ is a JSON object with a single boolean property of ‘isSignedIn’
+    // {
+    //      “isSignedIn” : true
+    // }
+
+    console.log(“Do something with result.isSignedIn”);
+    $(".n").hide();
+    
+});
+
+googleplaygame.signout();
+googleplaygame.showAllLeaderboards();
 
 
 },false);
