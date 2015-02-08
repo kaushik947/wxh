@@ -112,8 +112,8 @@ var score=-1;
 var curentscore=0;
 var htp=0;
 
-var link="https://play.google.com/store";
-var image="/android_asset/www/lnk.jpg";
+var link="https://play.google.com/store/apps/details?id=com.imangi.templerun";
+var image="www/myimg.jpg";
 var message="";
 
 
@@ -330,7 +330,7 @@ gmovr=0;
 	
 	message="My Score:"+curentscore+"\nMy Best:"+highscore;
 
-window.plugins.socialsharing.share('Message, subject, image and link', 'The subject', 'www/myimg.jpg', 'http://www.x-services.nl');
+window.plugins.socialsharing.share(message,'WIDTH x HEIGHT',image,link);
 	},false);
 
 	
