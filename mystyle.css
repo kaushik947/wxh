@@ -2,7 +2,7 @@
 {
 position:absolute;
 color:black;
-background:#0000E6;
+background:white;
 text-align:center;
 width:8%;
 top:15%;
@@ -127,7 +127,7 @@ font-size:120%;
 #backop
 {
 position:absolute;
-background:#0000E6;
+background:white;
 width:16%;
 left:20%;
 top:75%;
