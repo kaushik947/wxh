@@ -2,7 +2,7 @@
 {
 position:absolute;
 color:black;
-background:grey;
+background:#0000E6;
 text-align:center;
 width:8%;
 top:15%;
@@ -118,7 +118,7 @@ width:47%;
 display:none;
 text-align:center;
 color:black;
-background:grey;
+background:#0000E6;
 border-radius:10%;
 font-size:120%;
  text-shadow: 5px 5px 5px black;
@@ -127,7 +127,7 @@ font-size:120%;
 #backop
 {
 position:absolute;
-background:grey;
+background:#0000E6;
 width:16%;
 left:20%;
 top:75%;
