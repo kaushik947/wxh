@@ -328,7 +328,7 @@ gmovr=0;
 
 	share[0].addEventListener('touchstart',function(event){
 	
-	message="My Score:"+curentscore+"\nMy Best:"+highscore;
+	message="WIDTH x HEIGHT\nMy Score:"+curentscore+"\nMy Best:"+highscore+"\n";
 
 window.plugins.socialsharing.share(message,'WIDTH x HEIGHT',image,link);
 	},false);
