@@ -826,9 +826,9 @@ function mycheck()
 setTimeout(function(){
 speedbbb.fadeIn();
 
-speedbbb.velocity({width:'20%'},220) .velocity({left:'30%',width:'0%'},220) .velocity({width:'30%'},220) .velocity({left:'60%',width:'0%'},220) .velocity({width:'30%'},220).velocity({top:'70%',height:'0%'},220) .velocity({height:'20%'},220) 
-.velocity({width:'0%'},220) .velocity({left:'45%',width:'20%'},220) .velocity({height:'0%'},220)
-.velocity({top:'50%',height:'20%'},220,function (){
+speedbbb.velocity({width:'20%'},250) .velocity({left:'30%',width:'0%'},250) .velocity({width:'30%'},250) .velocity({left:'60%',width:'0%'},250) .velocity({width:'30%'},250).velocity({top:'70%',height:'0%'},250) .velocity({height:'20%'},250) 
+.velocity({width:'0%'},250) .velocity({left:'45%',width:'20%'},250) .velocity({height:'0%'},250)
+.velocity({top:'50%',height:'20%'},250,function (){
 
 
 
