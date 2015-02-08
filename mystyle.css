@@ -73,16 +73,21 @@ left:90%;
 -webkit-transform: skew(0deg,-20deg);
 }
 
+#brid
+{
+line-height:150%;
+}
+
 #dispscr
 {
 position:absolute;
 background:white;
 color:black;
-width:75%;
+width:60%;
 font-size:150%;
 border-radius:10%;
 text-align:center;
-left:12.5%;
+left:20%;
 top:35%;
 display:none;
 text-shadow: 5px 5px 5px black;
