@@ -8,6 +8,7 @@
     <!-- versionCode is optional and Android only -->
 
     <name>W x Ht</name>
+<icon src="myimg.jpg" />
 
     <description>
       Game
