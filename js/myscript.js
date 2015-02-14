@@ -39,9 +39,9 @@ speedb.css("left","50%");
      
 
 
-info.fadeOut();
-back.fadeOut();
-gamename.fadeIn(500);
+$("#info").fadeOut();
+$("#backop").fadeOut();
+$(".n").fadeIn(500);
 optiona.fadeIn(500);
 
 optionb.fadeIn(500);
@@ -90,8 +90,6 @@ var optionb;
 var optionc;
 var optiond;
 var optione;
-var info;
-var gamename;
 var scr;
 var livescr;
 var variationw;
@@ -141,21 +139,6 @@ var h=0;
 var w=0;
 
 
-
-var params = {
-    client_id: '651010955617-i5nog5noq43b52l7d34na4e90ih0nj1o.apps.googleusercontent.com',
-    client_secret: 'iEDFnDYQ300cNXi1cEOxVfMy',
-    scope: 'https://www.googleapis.com/auth/games',
-    callback: function(error, tokens) {
-        if (error);
-        else {
-            saveTokens(tokens);
-            
-        }
-    }
-};
-
-
 	var setdetect;
 	var setattack;
 var timer=2800;
@@ -193,8 +176,6 @@ optionc=$("#opc");
 optiond=$("#opd");
 optione=$("#ope");
 
-info=$("#info");
-gamename=$(".n");
 dispscr=$("#dispscr");
 scr=$("#score");
 hscr=$("#hscore");
@@ -227,9 +208,9 @@ speedbbb.css("top","50%");
 speedbbb.css("height","20%");
 speedbbb.css("width","20%");});
 
-info.fadeOut();
-back.fadeOut();
-gamename.fadeIn(500);
+$("#info").fadeOut();
+$("#backop").fadeOut();
+$(".n").fadeIn(500);
 optiona.fadeIn(500);
 
 optionb.fadeIn(500);
@@ -255,7 +236,7 @@ function() {
 dispscr.fadeOut();
 livescr.hide();
 
-gamename.fadeOut(500);
+$(".n").fadeOut(500);
 
 optiona.fadeOut(500);
 
@@ -267,7 +248,7 @@ optiond.fadeOut(500);
 
 optione.fadeOut(500);
 
-info.fadeIn();
+$("#info").fadeIn();
 speedbbb.fadeIn();
 
 speedbbb.velocity({left:'65%',width:'0%'},400).velocity({width:'20%'},400).velocity({height:'0%'},400).velocity({top:'35%',height:'15%'},400).velocity({width:'0%'},400,function(){
@@ -297,7 +278,7 @@ speedb.css("left","50%");
 }
 }).velocity({width:'0%'},450).velocity({left:'25%',width:'20%'},450,function(){
 
-back.fadeIn();
+$("#backop").fadeIn();
 
 
 });
@@ -327,8 +308,8 @@ optiond.fadeOut(500);
 
 optione.fadeOut(500);
 
-gamename.fadeOut();
-
+$(".n").fadeOut();
+$(".tgrad").fadeOut();
 	speeda.css("left","40%");
 
 		speeda.css("top","40%");
@@ -372,8 +353,7 @@ window.plugins.socialsharing.share(message,'WIDTH x HEIGHT',image,link);
 lead[0].addEventListener('touchstart',function(event){
 
 
-
-phonegapi.signIn(params);
+googleplaygame.auth();
 
 
 
@@ -644,11 +624,6 @@ flag=0;
 
 
 
-function saveTokens(tokens) {
-    localStorage['gapi_tokens'] = JSON.stringify(tokens);
-}
-
-
 function gameover()
 {
 	evehand=0;
@@ -672,7 +647,8 @@ optionc.fadeIn(500);
 optiond.fadeIn(500);
 
 optione.fadeIn(500);
-gamename.fadeIn(500);
+$(".n").fadeIn(500);
+$(".tgrad").fadeIn(500);
 
 if(score>highscore)
 {
@@ -870,7 +846,7 @@ speedbbb.fadeOut();
 
 
 
-gamename.fadeIn(500);
+$(".n").fadeIn(500);
 
 optiona.fadeIn(500);
 
@@ -1029,6 +1005,8 @@ livescr.text(score);
 
 
 }
+
+
 
 
 
