@@ -144,9 +144,15 @@ var w=0;
 
 var params = {
     client_id: '651010955617-i5nog5noq43b52l7d34na4e90ih0nj1o.apps.googleusercontent.com',
-    client_secret: '',
-    scope: 'https://www.googleapis.com/auth/games'
-    
+    client_secret: 'iEDFnDYQ300cNXi1cEOxVfMy',
+    scope: 'https://www.googleapis.com/auth/games',
+    callback: function(error, tokens) {
+        if (error);
+        else {
+            saveTokens(tokens);
+            
+        }
+    }
 };
 
 
@@ -636,6 +642,11 @@ flag=0;
 });
 
 
+
+
+function saveTokens(tokens) {
+    localStorage['gapi_tokens'] = JSON.stringify(tokens);
+}
 
 
 function gameover()
