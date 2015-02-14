@@ -141,7 +141,7 @@ var h=0;
 var w=0;
 
 
-
+/*
 var params = {
     client_id: '651010955617-i5nog5noq43b52l7d34na4e90ih0nj1o.apps.googleusercontent.com',
     client_secret: 'iEDFnDYQ300cNXi1cEOxVfMy',
@@ -154,7 +154,7 @@ var params = {
         }
     }
 };
-
+*/
 
 	var setdetect;
 	var setattack;
@@ -373,7 +373,7 @@ lead[0].addEventListener('touchstart',function(event){
 
 
 
-phonegapi.signIn(params);
+//phonegapi.signIn(params);
 
 
 
