@@ -472,7 +472,7 @@ if(flag==1)
 {
 
 
-    speeda.velocity({
+    speeda.animate({
                        top:diffy
                        ,height:tp-diffy
 
@@ -488,7 +488,7 @@ if(flag==1)
 
 else
 {
-    speeda.velocity({
+    speeda.animate({
                        top:tp
                        ,height:(diffy)-tp
 
@@ -504,7 +504,7 @@ else if(flag==2)
 {
 
 
-    speeda.velocity({
+    speeda.animate({
                        top:diffy
                        ,height:h+tp-diffy
 
@@ -521,7 +521,7 @@ else if(flag==2)
 
 else
 {
-    speeda.velocity({
+    speeda.animate({
                        top:tp+h
                        ,height:(diffy)-(tp+h)
 
@@ -543,7 +543,7 @@ else if(flag==3)
 {
 
 
-    speeda.velocity({
+    speeda.animate({
                        left:diffx
                        ,width:lef-diffx
 
@@ -560,7 +560,7 @@ else if(flag==3)
 
 else
 {
-    speeda.velocity({
+    speeda.animate({
                        left:lef
                        ,width:(diffx)-lef
 
@@ -582,7 +582,7 @@ else if(flag==4)
 {
 
 
-    speeda.velocity({
+    speeda.animate({
                        left:diffx
                        ,width:w+lef-diffx
 
@@ -599,7 +599,7 @@ else if(flag==4)
 
 else
 {
-    speeda.velocity({
+    speeda.animate({
                        left:lef+w
                        ,width:(diffx)-(lef+w)
 
