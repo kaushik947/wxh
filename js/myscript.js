@@ -304,7 +304,7 @@ play[0].addEventListener('touchstart', function() {
 if(evehand!=1)
 {
 	evehand=1;
-	    	//media=new Media("/android_asset/www/flyby-Conor-1500306612.mp3");
+	    	media=new Media("/android_asset/www/flyby-Conor-1500306612.mp3");
 		
 dispscr.fadeOut();
 livescr.text(score+1);
