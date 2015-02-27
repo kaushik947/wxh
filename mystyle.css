@@ -176,7 +176,6 @@ width:42.5%;
 display:none;
 text-align:center;
 color:white;
-background:black
 border-radius:10%;
 font-size:120%;
  text-shadow: 5px 5px 5px white;
@@ -201,28 +200,33 @@ display:none;
 {
 left:4.5%;
 top:55%;
+background:black;
 }
 #opb
 {
 left:4.5%;
 top:72%;
+background:blue;
 }
 #opc
 {
 left:53%;
 top:55%;
 width:20.5%;
+background:green;
 }
 #ope
 {
 left:75.5%;
 top:55%;
 width:20%;
+background:grey;
 }
 #opd
 {
 left:53%;
 top:72%;
+background:purple;
 }
 
 
