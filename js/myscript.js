@@ -163,7 +163,7 @@ speedb.css("top","100%");
 speedb.css("left","50%");
      
      
-bgg.fadeIn();
+bgg.show();
 
 information.fadeOut();
 back.fadeOut();
@@ -263,7 +263,7 @@ information.fadeOut();
 back.fadeOut();
 gamename.fadeIn();
 
-bgg.fadeIn();
+bgg.show();
 
 optiona.fadeIn();
 
@@ -292,7 +292,7 @@ livescr.hide();
 
 gamename.fadeOut();
 
-bgg.fadeOut();
+bgg.hide();
 
 optiona.fadeOut();
 
@@ -355,7 +355,7 @@ dispscr.fadeOut();
 livescr.text(score+1);
 livescr.show();
 
-bgg.fadeOut();
+bgg.hide();
 
 optiona.fadeOut();
 
@@ -669,7 +669,7 @@ optiond.fadeIn();
 optione.fadeIn();
 gamename.fadeIn();
 border.fadeIn();
-bgg.fadeIn();
+bgg.show();
 
 if(score>highscore)
 {
@@ -877,7 +877,7 @@ speedbbb.velocity({width:'20%'},250) .velocity({left:'30%',width:'0%'},250) .vel
 
 speedbbb.fadeOut();
 
-bgg.fadeIn();
+bgg.show();
 
 gamename.fadeIn();
 
