@@ -14,7 +14,7 @@ var optionb;
 var optionc;
 var optiond;
 var optione;
-
+var back;
 var bg1;
 var bg2;
 var bg3;
@@ -242,7 +242,7 @@ livescr=$("#livescore");
 	
 	var play=optiona;
     var htplay=optionb;
-     var back=$("#backop");
+     back=$("#backop");
      var lead=optiond;
      var share=optione;
 
