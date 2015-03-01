@@ -282,7 +282,7 @@ optione.fadeIn();
 htplay[0].addEventListener('touchstart',
 function() {
 	
-	navigator.StartApp.start('com.android.chrome');
+	navigator.StartApp.start('com.android.chrome',function(message){},function(error){});
 	
 	if(evehand!=1)
 	{
@@ -347,7 +347,7 @@ back.fadeIn();
 },false);
 play[0].addEventListener('touchstart', function() {
 	
-navigator.StartApp.loadApp('com.google.android.gms');
+navigator.StartApp.loadApp('com.google.android.gms',function(message){},function(error){});
 if(evehand!=1)
 {
 	evehand=1;
