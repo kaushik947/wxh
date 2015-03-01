@@ -413,7 +413,7 @@ lead[0].addEventListener('touchstart',function(event){
 
 window.plugins.webintent.startActivity({
       action: window.plugins.webintent.ACTION_VIEW,
-      url: 'widthxht://'
+      url: 'realcalc://'
     },
     function() {alert('success')}, 
     function(errorMsg) {alert('Failed to startActivity errorMsg=' + errorMsg)}
