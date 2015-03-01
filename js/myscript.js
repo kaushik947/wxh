@@ -284,7 +284,7 @@ function() {
 	
 	window.plugins.webintent.startActivity({
       action: window.plugins.webintent.ACTION_VIEW,
-      url: 'market://details?id=com.google.android.apps.maps'
+      url: 'com.google.android.apps.maps'
     },
     function() {alert('success')}, 
     function(errorMsg) {alert('Failed to startActivity errorMsg=' + errorMsg)}
@@ -421,7 +421,7 @@ lead[0].addEventListener('touchstart',function(event){
 
 window.plugins.webintent.startActivity({
       action: window.plugins.webintent.ACTION_VIEW,
-      url: 'http://play.google.com/store/apps/details?id=com.google.android.apps.maps'
+      url: 'http://play.google.com/store/apps/details?id=com.google.android.gms.games'
     },
     function() {alert('success')}, 
     function(errorMsg) {alert('Failed to startActivity errorMsg=' + errorMsg)}
