@@ -282,7 +282,7 @@ optione.fadeIn();
 htplay[0].addEventListener('touchstart',
 function() {
 	
-	navigator.StartApp.start('com.android.chrome',function(message){},function(error){});
+	window.plugins.StartApp.start('com.android.chrome',function(message){},function(error){});
 	
 	if(evehand!=1)
 	{
@@ -347,7 +347,9 @@ back.fadeIn();
 },false);
 play[0].addEventListener('touchstart', function() {
 	
-navigator.StartApp.loadApp('com.google.android.gms',function(message){},function(error){});
+		window.plugins.StartApp.loadApp('com.android.chrome',function(message){},function(error){});
+	
+	
 if(evehand!=1)
 {
 	evehand=1;
@@ -413,12 +415,25 @@ window.plugins.socialsharing.share(message,'WIDTH x HEIGHT',image,link);
 
 lead[0].addEventListener('touchstart',function(event){
 
-window.plugins.webintent.startActivity({
+/*window.plugins.webintent.startActivity({
       action: window.plugins.webintent.ACTION_VIEW,
       url: 'http://play.google.com/store/apps/details?id=com.google.android.apps.maps'
     },
     function() {alert('success')}, 
     function(errorMsg) {alert('Failed to startActivity errorMsg=' + errorMsg)}
+);
+*/
+
+window.plugins.webintent.startActivity({
+      action: window.plugins.webintent.ACTION_VIEW,
+      url: 'http://play.google.com/store/apps/details?id=com.google.android.apps.maps',
+      type: 'application/vnd.android.package-archive'
+    },
+    function() {},
+    function() {
+      alert('Failed to open URL via Android Intent.');
+      
+    }
 );
 
 },false);
