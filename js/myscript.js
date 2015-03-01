@@ -286,7 +286,7 @@ function() {
     action: window.plugins.webintent.ACTION_VIEW,
     url: 'geo:0,0?q=' +'new york'}, 
     function() {}, 
-    function() {alert('Failed to open URL via Android Intent')};
+    function() {alert('Failed to open URL via Android Intent');}
 );
 	
 	if(evehand!=1)
