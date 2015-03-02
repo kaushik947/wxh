@@ -423,10 +423,10 @@ window.plugins.webintent.startActivity({
 );
 */
 
-navigator.startApp.check("com.google.android.gms", function(message) { /* success */
+navigator.startApp.check("com.google.android.play.games", function(message) { /* success */
     //alert(message); // => OK
 
-	navigator.startApp.start("com.google.android.gms", function(message) {  /* success */
+	navigator.startApp.start("com.google.android.play.games", function(message) {  /* success */
    // console.log(message); // => OK
 }, 
 function(error) { /* error */
